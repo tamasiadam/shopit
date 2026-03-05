@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    -BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+}
+
+main {
+  font-size: 28px;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  height: 100px;
+}
+
+header h1 {
+  font-size: 50px;
+  margin: 20px 0px 20px 0px;
+  padding-top: 0px;
+  font-weight: 3;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: #777;
+  margin: 20px auto;
+  max-width: 1920px;
+}
+
+li {
+  list-style-type: none;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 5px;
+  width: 200px;
+  font-size: 20px;
+  border: solid rgba(0, 0, 0, 0.342) 2px;
+  border-radius: 5px;
+}
+
+.input-container input {
+  margin: 20px;
+  height: 50px;
+  width: 200px;
+}
+
+.input-container button {
+  height: 50px;
+  width: 100px;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+}
+
+.input-container button:hover {
+  background-color: #444444;
+}
+
+#myUL {
+  padding: 0;
+  margin-top: 40px;
+  margin-left: 200px;
+  height: ;
+}
+
+#myUL li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 40px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li.checked {
+  background: #888;
+  color: #a02929;
+  text-decoration: line-through;
+}
+
+ul li.checked .task-text {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.349);
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border-color: #05ad05;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  height: 15px;
+  width: 7px;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: red;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
