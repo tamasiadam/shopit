@@ -71,7 +71,6 @@ li {
   padding: 0;
   margin-top: 40px;
   margin-left: 200px;
-  height: ;
 }
 
 #myUL li {
@@ -99,7 +98,6 @@ ul li.checked .task-text {
   color: rgba(0, 0, 0, 0.349);
 }
 
-/* Add a "checked" mark when clicked on */
 ul li.checked::before {
   content: '';
   position: absolute;
@@ -117,7 +115,6 @@ ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-/* Darker background-color on hover */
 ul li:hover {
   background: #ddd;
 }
@@ -133,14 +130,4 @@ ul li:hover {
 
 .close:hover {
   color: red;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
 }
