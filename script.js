@@ -1,52 +1,38 @@
-// hozzaadas
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var spanText = document.createElement("span");
-  spanText.className = "task-text";
-  spanText.textContent = inputValue;
-  li.appendChild(spanText);
-  if (inputValue === '') {
-    alert("írj ide vmit");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-// torles X
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("X");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function (e) {
-      e.stopPropagation();
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-} 
-
-// bezarja
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function (e) {
-    e.stopPropagation();
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
 }
 
-// kipipálja
-var list = document.querySelector('#myUL');
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
 
-list.addEventListener('click', function (ev) {
-  var li = ev.target.closest("li");
-  if (li && !ev.target.classList.contains("close")) {
-    li.classList.toggle("checked");
+function submitData() {
+  const p1 = document.getElementById("termek").value;
+  const p2 = document.getElementById("mennyiseg").value;
+  const p3 = document.getElementById("ar").value;
+  if (!p1 || !p2 || !p3) {
+    alert("Kérlek töltsd ki az összes mezőt.");
+    return;
   }
-});
+
+  const price = Number(p3);
+  if (Number.isNaN(price)) {
+    alert("Az ár mezőnek számnak kell lennie.");
+    return;
+  }
+
+  const tableBody = document.getElementById("myTableBody");
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${p1}</td>
+    <td>${p2}</td>
+    <td>${price}</td>
+  `;
+  tableBody.appendChild(row);
+
+  document.getElementById("termek").value = "";
+  document.getElementById("mennyiseg").value = "";
+  document.getElementById("ar").value = "";
+
+  closeModal();
+}

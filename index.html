@@ -2,7 +2,7 @@
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
-    <meta author="DYB" />
+    <meta author="Simplicity" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Shop It 🛒</title>
   </head>
@@ -16,12 +16,38 @@
       </header>
 
       <section>
-        <ul id="myUL">
-        </ul>
+        <table class="items-table">
+          <thead>
+            <tr>
+              <th>Termék</th>
+              <th>Mennyiség</th>
+              <th>Ár</th>
+            </tr>
+          </thead>
+          <tbody id="myTableBody"></tbody>
+        </table>
 
-        <div class="input-container">
-          <input type="text" id="myInput" placeholder="Írd be a feladatot..." />
-          <button onclick="newElement()" class="addBtn">Hozzáadás</button>
+        <button id="openModalBtn" onclick="openModal()">Hozzáadás</button>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <h3>Termék leírása</h3>
+
+            <input
+              type="text"
+              id="termek"
+              placeholder="Termék neve"
+            /><br /><br />
+            <input
+              type="text"
+              id="mennyiseg"
+              placeholder="Mennyiség"
+            /><br /><br />
+            <input type="text" id="ar" placeholder="Ár (ft)" /><br /><br />
+
+            <button onclick="submitData()">Hozzáadás</button>
+            <button onclick="closeModal()">Mégse</button>
+          </div>
         </div>
       </section>
     </main>
