@@ -26,7 +26,7 @@ function submitData() {
   row.innerHTML = `
     <td>${p1}</td>
     <td>${p2}</td>
-    <td>${price}</td>
+    <td>${price} ft</td>
   `;
   tableBody.appendChild(row);
 
