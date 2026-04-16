@@ -6,6 +6,14 @@ function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
 
+function completeRow(btn) {
+  btn.closest("tr").classList.toggle("row-completed");
+}
+
+function deleteRow(btn) {
+  btn.closest("tr").remove();
+}
+
 function submitData() {
   const p1 = document.getElementById("termek").value;
   const p2 = document.getElementById("mennyiseg").value;
@@ -27,6 +35,10 @@ function submitData() {
     <td>${p1}</td>
     <td>${p2}</td>
     <td>${price} ft</td>
+    <td class="row-actions">
+      <button class="btn-complete" onclick="completeRow(this)" title="Kész">✓</button>
+      <button class="btn-delete" onclick="deleteRow(this)" title="Törlés">✕</button>
+    </td>
   `;
   tableBody.appendChild(row);
 

@@ -82,17 +82,9 @@ header h1 {
   background-color: #fafafa;
 }
 
-@keyframes rowSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.items-table tbody tr.row-completed:hover td {
+  background-color: rgba(0, 186, 0, 0.687);
 }
-
 
 #openModalBtn {
   background-color: #1a1a1a;
@@ -126,12 +118,6 @@ header h1 {
   z-index: 100;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-
 .modal-content {
   background: #ffffff;
   padding: 28px 28px 24px;
@@ -140,17 +126,6 @@ header h1 {
   border-radius: 14px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
   animation: slideUp 0.25s ease;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .modal-content h3 {
@@ -218,4 +193,42 @@ input[type="text"]::placeholder {
 
 .modal-content button:active {
   transform: scale(0.97);
+}
+
+
+.row-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.btn-complete,
+.btn-delete {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+.btn-complete {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+  margin-right: 6px;
+}
+
+.btn-delete {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.row-completed td {
+  opacity: 0.6;
+  background-color: rgba(0, 186, 0, 0.4);
+}
+
+.row-completed .btn-complete {
+  background-color: #2e7d32;
+  color: #ffffff;
 }
