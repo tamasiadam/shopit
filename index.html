@@ -16,12 +16,18 @@
       </header>
 
       <section>
+        <p class="amount">
+          🟩 Kifizetve: <span id="paidAmount">0</span> ft <br />🟥 Fennmaradó
+          összeg: <span id="remainingAmount">0</span> ft
+        </p>
+
         <table class="items-table">
           <thead>
             <tr>
               <th>Termék</th>
               <th>Mennyiség</th>
-              <th>Ár</th>
+              <th>Egységár</th>
+              <th>Teljes ár</th>
               <th></th>
             </tr>
           </thead>
@@ -44,7 +50,11 @@
               id="mennyiseg"
               placeholder="Mennyiség"
             /><br /><br />
-            <input type="text" id="ar" placeholder="Ár (ft)" /><br /><br />
+            <input
+              type="text"
+              id="egysegar"
+              placeholder="Egységár (ft)"
+            /><br /><br />
 
             <button onclick="submitData()">Hozzáadás</button>
             <button onclick="closeModal()">Mégse</button>
