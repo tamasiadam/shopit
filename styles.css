@@ -242,3 +242,56 @@ input[type="text"]::placeholder {
   background-color: #2e7d32;
   color: #ffffff;
 }
+
+/* reszponzív részleg */
+
+@media (max-width: 600px) {
+  .main {
+    padding: 20px 16px 40px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .amount {
+    font-size: 0.85rem;
+  }
+
+  .items-table {
+    font-size: 0.85rem;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .items-table th,
+  .items-table td {
+    padding: 10px 12px;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .modal-content h3 {
+    font-size: 1rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.85rem;
+    padding: 12px 14px;
+  }
+
+  #openModalBtn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
